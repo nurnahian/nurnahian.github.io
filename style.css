@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+}
+.content{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.content p{
+    font-size: 45px;
+    font-weight: 600;
+}
+.content h1{
+    font-size: 35px;
+    font-weight: 600;
+}
+.lanch-time{
+    display: flex;
+}
+.lanch-time div{
+    flex-basis: 100px;
+}
+.lanch-time div p{
+    font-size: 60px;
+    margin-bottom: -14px;
+}
