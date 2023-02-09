@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comming Soon</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Home | Nur Nahian</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="content">
-            <p>This website is under construction</p>
-            <h1>Site Launching Soon</h1>
-            <div class="lanch-time">
-                <div>
-                    <p id="days">00</p>
-                    <span>Day</span>
-                </div>
-                <div>
-                    <p id="hours">00</p>
-                    <span>Hours</span>
-                </div>
-                <div>
-                    <p id="minutes">00</p>
-                    <span>Minutes</span>
-                </div>
-                <div>
-                    <p id="seconds">00</p>
-                    <span>Seconds</span>
+    <div id="particles-js">
+        <div class="topd">
+            <div class="content">
+                <p>This website is under construction</p>
+                <h1>Site Launching Soon</h1>
+                <div class="lanch-time">
+                    <div>
+                        <p id="days">00</p>
+                        <span>Day</span>
+                    </div>
+                    <div>
+                        <p id="hours">00</p>
+                        <span>Hours</span>
+                    </div>
+                    <div>
+                        <p id="minutes">00</p>
+                        <span>Minutes</span>
+                    </div>
+                    <div>
+                        <p id="seconds">00</p>
+                        <span>Seconds</span>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 
-<script>
-    var countDown = new Date("Mar 30, 2023 00:00:00").getTime();
-    var x = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countDown - now;
+    <script src="./particles.js"></script>
+    <script src="./js/app.js"></script>
 
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <script>
+        var countDown = new Date("Mar 30, 2023 00:00:00").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDown - now;
 
-        document.getElementById("days").innerHTML =days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
-    }, 1000);
-</script>
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+        }, 1000);
+    </script>
 </body>
+
 </html>
